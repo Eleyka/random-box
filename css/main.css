@@ -1,0 +1,30 @@
+#box{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5%;
+  
+}
+.boxReact{
+  width: 40%; 
+  height: 300px;
+  font-family: 'Lovers Quarrel', cursive;
+  padding: 15px;
+  border-radius: 10px;
+  border: 4px solid #005365;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-align: justify;
+  opacity: 0.7;
+}
+body {
+  background: url("../assets/fondo.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

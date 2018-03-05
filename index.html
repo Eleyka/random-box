@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/react@16.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.2.0/umd/react-dom.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+  <title>Random-box</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">  
+ <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
+</head>
+
+<body>
+  <div id="box"></div>
+
+  <script type="text/babel">
+    class BoxColor extends React.Component{
+      render(){
+        function ramdonColor() {
+          let letters = '0123456789ABCDEF';
+          let colory = '#';
+            for (let i = 0; i < 6; i++ ) {
+              colory += letters[Math.floor(Math.random() * 16)];
+            }  
+          let bgColor = {backgroundColor:colory}
+          return bgColor;
+        };
+        return(
+          <div style={ramdonColor()} className = "boxReact">
+            "El baile y la tecnología es mi verdadera pasión; ambos son un complemento perfecto en mi vida porque juntos tienen el secreto de la felicidad que me hace sentir, soñar, expresar, gozar, disfrutar, vivir y amar."
+            <h5>Eleyne Ramírez</h5>
+
+          </div>
+        );
+      }  
+    }
+    ReactDOM.render(<BoxColor/>, document.getElementById('box'));
+  </script>
+</body>
+
+</html>
